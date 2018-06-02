@@ -3,16 +3,16 @@ project(simple-rsa-cracker)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(RSA_Cracker_Boost rsaCrackerBoost.cpp)
+add_executable(RSA_Cracker_BoostMpi rsaCrackerBoostMpi.cpp)
 add_executable(RSA_Cracker_OpenMp rsaCrackerOpenMp.cpp)
 
 find_package(Boost REQUIRED mpi serialization)
 include_directories(${Boost_INCLUDE_DIRS})
-target_link_libraries(RSA_Cracker_Boost ${Boost_LIBRARIES})
+target_link_libraries(RSA_Cracker_BoostMpi ${Boost_LIBRARIES})
 
 find_package(MPI REQUIRED)
 include_directories(${MPI_CXX_INCLUDE_PATH})
-target_link_libraries(RSA_Cracker_Boost ${MPI_CXX_LIBRARIES})
+target_link_libraries(RSA_Cracker_BoostMpi ${MPI_CXX_LIBRARIES})
 
 find_package(OpenMP)
 if (OPENMP_FOUND)
