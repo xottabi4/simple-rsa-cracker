@@ -8,6 +8,7 @@ This repo includes cracking RSA in paralel way using 2 different C++ libraries:
 ### How to compile code and then run it
 
 First you should have installed dependencies on you PC:
+
 In Ubuntu case it would be:
   
   
